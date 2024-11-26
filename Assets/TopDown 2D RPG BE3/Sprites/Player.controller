@@ -12,7 +12,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isChanged
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: vAxisRaw
+    m_ConditionEvent: hAxisRaw
     m_EventTreshold: -1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4785057860481121031}
@@ -119,8 +119,8 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isChanged
     m_EventTreshold: 0
-  - m_ConditionMode: 3
-    m_ConditionEvent: vAxisRaw
+  - m_ConditionMode: 6
+    m_ConditionEvent: hAxisRaw
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6202993833464581201}
