@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4113906612899939798}
   - component: {fileID: -6884385265996619624}
   - component: {fileID: 6381731041846939187}
-  - component: {fileID: 2363692027278112855}
+  - component: {fileID: -910935673405852171}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -126,7 +126,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -159,7 +159,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: -6884385265996619624}
   - {fileID: 6381731041846939187}
-  - {fileID: 2363692027278112855}
+  - {fileID: -910935673405852171}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
---- !u!114 &2363692027278112855
+--- !u!114 &-910935673405852171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
