@@ -198,9 +198,13 @@ namespace WebRTCTutorial
             {
                 rawImage = videoPanel.AddComponent<RawImage>();
             }
-            videoPanel.transform.localScale = new Vector3(7, 7, 0f); // 크기 설정
-            videoPanel.transform.localPosition = new Vector3(1f, 2f, 0f); // 위치 이거 부모기준이야?
-            videoPanel.transform.rotation = Quaternion.Euler(0, 0, 90);
+            RectTransform rectTransform = videoPanel.GetComponent<RectTransform>();
+            if (rectTransform != null)
+            {
+                rectTransform.sizeDelta = new Vector2(200, 100);
+           
+            }
+            videoPanel.transform.localPosition = new Vector3(120f, 145f, 0f); 
             return rawImage;
         }
 

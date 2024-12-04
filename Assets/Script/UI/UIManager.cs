@@ -227,7 +227,7 @@ namespace WebRTCTutorial.UI
             // _peerViewB.SetVideoTexture( /* Remote Video Texture */ );
 
             // Rotate PeerView A and PeerView B GameObjects by 90 degrees on Y-axis
-            _peerViewA.transform.rotation = Quaternion.Euler(0, 0, 90); // Rotate 90 degrees on Y-axis
+            
            
             Debug.Log("good");
 
