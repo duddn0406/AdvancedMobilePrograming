@@ -201,10 +201,10 @@ namespace WebRTCTutorial
             RectTransform rectTransform = videoPanel.GetComponent<RectTransform>();
             if (rectTransform != null)
             {
-                rectTransform.sizeDelta = new Vector2(200, 100);
+                rectTransform.sizeDelta = new Vector2(200, 112);
            
             }
-            videoPanel.transform.localPosition = new Vector3(120f, 145f, 0f); 
+            videoPanel.transform.localPosition = new Vector3(250f, 148f, 0f); 
             return rawImage;
         }
 
