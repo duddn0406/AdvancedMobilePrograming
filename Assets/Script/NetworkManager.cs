@@ -47,6 +47,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         chatUI.SetActive(true);
     }
 
+
+
     public override void OnConnectedToMaster()
     {
         // 방 입장 로직 처리
@@ -54,7 +56,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             Debug.Log($"Joining private room: {privateRoomName}");
             privateUI.SetActive(true);
-            chatUI.SetActive(false);
+            chatUI.SetActive(true);
             PhotonNetwork.JoinOrCreateRoom(privateRoomName, new RoomOptions { MaxPlayers = 2 }, null);
         }
         else
@@ -77,7 +79,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     private void SpawnPlayer()
     {
         // 플레이어 오브젝트 생성
-        PhotonNetwork.Instantiate("Player", new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0), Quaternion.identity);
+        if (isJoiningPrivateRoom)
+        {
+            PhotonNetwork.Instantiate("Player", new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0), Quaternion.identity);
+        }
+        else
+        {
+            PhotonNetwork.Instantiate("Player", new Vector3(Random.Range(-32f, -25f), Random.Range(-5f, 5f), 0), Quaternion.identity);
+           
+        }
+       
     }
 
     public void SendChatMessage()
@@ -145,6 +156,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         isJoiningPrivateRoom = true; // 1대1 방 이동 플래그 활성화
         PhotonNetwork.LeaveRoom(); // 현재 방 나가기
     }
+ 
 
     public void DeclineChatRequest()
     {
