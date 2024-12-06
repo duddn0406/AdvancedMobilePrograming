@@ -81,7 +81,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         // 플레이어 오브젝트 생성
         if (isJoiningPrivateRoom)
         {
-            PhotonNetwork.Instantiate("Player", new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0), Quaternion.identity);
+            PhotonNetwork.Instantiate("Player", new Vector3(Random.Range(-5f, 5f), Random.Range(-2f, 5f), 0), Quaternion.identity);
         }
         else
         {
